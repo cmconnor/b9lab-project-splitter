@@ -1,0 +1,228 @@
+{
+  "contract_name": "Splitter",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getBalanceContract",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getAddressBob",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getAddressCarol",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getBalanceCarol",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getBalanceBob",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getAddressAlice",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getBalanceAlice",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "alice",
+          "type": "address"
+        },
+        {
+          "name": "bob",
+          "type": "address"
+        },
+        {
+          "name": "carol",
+          "type": "address"
+        }
+      ],
+      "payable": true,
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "LogRecievedPayment",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_to1",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_value1",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "_to2",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_value2",
+          "type": "uint256"
+        }
+      ],
+      "name": "LogSplitPaymentSent",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040526040516060806103ee8339810160405280805191906020018051919060200180519150505b60008054600160a060020a03808616600160a060020a0319928316179092556001805485841690831617905560028054928416929091169190911790555b5050505b6103748061007a6000396000f300606060405236156100805763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166366bd78fd81146101b5578063a1a34262146101da578063b952cd0314610209578063cc66649614610238578063d734426c1461025d578063ee438dc414610282578063fb79debe146102b1575b5b60008033600160a060020a03167fea889a3c46827f3c21df00659fc9b883e94a02f681142de453665eb69d940ce03460405190815260200160405180910390a260005433600160a060020a039081169116146100dc57600080fd5b600034116100e957600080fd5b6002345b6001549190049250348390039150600160a060020a031682156108fc0283604051600060405180830381858888f19350505050151561012b57600080fd5b600254600160a060020a031681156108fc0282604051600060405180830381858888f19350505050151561015e57600080fd5b600254600154600160a060020a03918216919081169033167f01e58386aba00c5bb64afb273df166bad429e4a923c46f818ee32842cadd3423858560405191825260208201526040908101905180910390a45b5050005b34156101c057600080fd5b6101c86102d6565b60405190815260200160405180910390f35b34156101e557600080fd5b6101ed6102e5565b604051600160a060020a03909116815260200160405180910390f35b341561021457600080fd5b6101ed6102f5565b604051600160a060020a03909116815260200160405180910390f35b341561024357600080fd5b6101c8610305565b60405190815260200160405180910390f35b341561026857600080fd5b6101c8610316565b60405190815260200160405180910390f35b341561028d57600080fd5b6101ed610327565b604051600160a060020a03909116815260200160405180910390f35b34156102bc57600080fd5b6101c8610337565b60405190815260200160405180910390f35b600160a060020a033016315b90565b600154600160a060020a03165b90565b600254600160a060020a03165b90565b600254600160a060020a0316315b90565b600154600160a060020a0316315b90565b600054600160a060020a03165b90565b600054600160a060020a0316315b905600a165627a7a72305820ac99a787910c7e3de12aeed07a97998a76e42f4c0831991ab9cb38133e9f1f4d0029",
+  "networks": {
+    "42": {
+      "events": {
+        "0xea889a3c46827f3c21df00659fc9b883e94a02f681142de453665eb69d940ce0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "_from",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_value",
+              "type": "uint256"
+            }
+          ],
+          "name": "LogRecievedPayment",
+          "type": "event"
+        },
+        "0x01e58386aba00c5bb64afb273df166bad429e4a923c46f818ee32842cadd3423": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "_from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "_to1",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_value1",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "_to2",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_value2",
+              "type": "uint256"
+            }
+          ],
+          "name": "LogSplitPaymentSent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xbfe8b2ceb2e98448af2a8a507e336c699ff67cdf",
+      "updated_at": 1517212135935
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1517212135935
+}
